@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/els.png"> -->
     <title>Estudios en el exterior I ULPA - University Language Programs Abroad</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,11 +12,9 @@
         .centrar {
             text-align: center !important;
         }
-
         body {
             font-family: 'Open Sans', sans-serif !important;
         }
-
         [v-cloak] {
             display: none;
         }
@@ -52,7 +49,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-secundary text-white">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" style="color:white !important;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand" href="#">
@@ -190,10 +187,9 @@
         <div class="container">
             <hr>
             <div class="row justify-content-center">
-                <!-- <div class="col-md-12"> -->
                 <form id="contacto" @submit.prevent="send()" class="col-md-8">
-                    <div class="alert-danger rounded" v-if="error">
-                        <p class="p-4" v-text="error"></p>
+                    <div class="rounded" :class="error.class" v-if="error">
+                        <p class="p-4" v-text="error.mensaje"></p>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nombre</label>
@@ -206,10 +202,8 @@
                         <input type="email" class="form-control" id="email" placeholder="Email"
                             v-model="registro.email">
                     </div>
-                    <button type="submit" class="btn bg-primary text-white btn-block">Enviar</button>
+                    <button type="submit" class="btn bg-primary text-white btn-block" :disabled="button">Enviar</button>
                 </form>
-
-                <!-- </div> -->
             </div>
         </div>
     </div>

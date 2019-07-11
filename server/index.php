@@ -1,9 +1,15 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Cargar el cargador automático del compositor
+require 'vendor/autoload.php';
+
+
 if ($_POST) {
     if ($_POST['nombre']) {
-
-        return json_encode(sendMessage()) ;
-        
+        return json_encode(sendMessage()); 
     }
 }else{
     echo 'No hay nada disponible.';

@@ -5,7 +5,8 @@ new Vue({
             nombre: '',
             email: ''
         },
-        error:false,
+        button:false,
+        error:{class:'', mensaje:''},
     },
     created() {
 
@@ -19,18 +20,26 @@ new Vue({
         },
         send() {
             if (this.registro.nombre.trim() == '') {
-                this.error = 'El nombre es incorrecto.'
+                this.error.class = 'alert-danger'
+                this.error.mensaje = 'El nombre es incorrecto.'
             }else if(this.registro.email.trim() == ''){
-                this.error = 'El email es incorrecto.'
+                this.error.class = 'alert-danger'
+                this.error.mensaje = 'El email es incorrecto.'
+
             }else{
-                this.error = false;
+                // this.error = false;
                 $.ajax({
                     type: "POST",
                     url: "server",
                     data: this.registro,
-                    success(resp){
-                        console.log( JSON.parse(resp));
-                        
+                    success:(data)=>{
+                        data = JSON.parse(data)
+                        if (data.resp) {
+                            this.error.class = "alert-success"
+                            this.error.mensaje = data.mensaje
+                            this.button = true
+                        }
+                        // console.log( data.mensaje );
                     }
                 });
             }
