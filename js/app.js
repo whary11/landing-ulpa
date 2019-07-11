@@ -23,7 +23,16 @@ new Vue({
             }else if(this.registro.email.trim() == ''){
                 this.error = 'El email es incorrecto.'
             }else{
-                this.error = 'El email es incorrecto.'
+                this.error = false;
+                $.ajax({
+                    type: "POST",
+                    url: "server",
+                    data: this.registro,
+                    success(resp){
+                        console.log( JSON.parse(resp));
+                        
+                    }
+                });
             }
         }
     },
