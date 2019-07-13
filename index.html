@@ -1,218 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Estudios en el exterior I ULPA - University Language Programs Abroad</title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        .centrar {
-            text-align: center !important;
-        }
-        body {
-            font-family: 'Open Sans', sans-serif !important;
-        }
-        [v-cloak] {
-            display: none;
-        }
-
-        .img-with {
-            width: 200px;
-        }
-
-        .tamano-iconos {
-            width: 80px;
-        }
-
-        .icon-mobile {
-            width: 30px;
-        }
-
-        .bg-primary {
-            background-color: #ee4057 !important;
-        }
-
-        .bg-secundary {
-            background-color: #0a2857 !important;
-        }
-
-        .tx-primary {
-            color: #ee4057 !important;
-        }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Estudios en el exterior I ULPA - University Language Programs Abroad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/component.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+      .text-red{
+        color: red !important;
+      }
     </style>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-secundary text-white">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="color:white !important;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png"  style="width: 100px" alt="">
-            </a>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            </ul>
+<body onLoad="load()" onUnload="GUnload()">
+
+  <div id="app">
+
+    <div class="wrapper" id="wrapper">
+      <div id="preloader">
+        <div id="status"></div>
+      </div>
+      <header>
+
+        <div class="menu">
+          <div class="navbar-wrapper">
+            <div class="container">
+              <div class="navwrapper">
+                <div class="navbar navbar-inverse navbar-static-top">
+                  <div class="container">
+                    <div class="logo"> <img src="images/logo-ulpa.png" alt=""> </div>
+                    <nav class="navArea">
+                      <div class="navbar-collapse collapse">
+                        <i class="fa fa-mobile"></i>
+                        <h3>Llámanos: 315 7904434</h3>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- End Navbar -->
+            </div>
+          </div>
+        </div>
+        <!--menu end-->
+
+        <div class="banner row" id="banner">
+          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
+            <div class="slide">
+              <div class="container hedaer-inner">
+                <div class="bannerText">
+                  <h3>Vive una experiencia inolvidable</h3>
+                  <h3>Estudiando Inglés en Canadá</h3>
+                  <p><span>Te Conectamos con Instituciones Acreditadas en Canadá</span></p>
+                  <button type="button" class="btn btn-principal btn-lg" @click.prevent="scroll()">Aplica a un programa</button>
+                </div>
+              </div>
+              <img src="images/principal-img.jpg" alt="Imagen Ulpa">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row justify-content-center mt-50">
+          <div class="col-md-3">
             <div>
-                <p class="m-2"> Llamanos al 315 7904434 <a href="" class="p-2"><img src="img/whatsapp.svg"
-                            class="icon-mobile"></a> </p>
+              <img src="images/logo-aliado-2.jpg" class="img-with">
             </div>
+          </div>
+          <div class="col-md-2">
+            <div>
+              <img src="images/logo-aliado-1.jpg" class="img-with">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="">
+              <img src="images/logo-aliado-4.jpg"  class="img-with">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="">
+              <img src="images/logo-aliado-3.jpg" class="img-with">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="">
+              <img src="images/logo-aliado-5.jpg" class="img-with">
+            </div>
+          </div>
+          <!-- <div class="col-md-2">
+              <div class="">
+                <img src="images/logo-aliado-5.jpg" class="img-with">
+              </div>
+            </div> -->
         </div>
-    </nav>
+      </div>
 
-    <div class="container mt-4 mb-4" id="app" v-cloak>
-        <div class="row justify-content-center">
-            <div class="text-uppercase">
-                <p class="centrar m-0">Vive una experiencia inolvidable</p>
-                <p class="centrar m-0">estudiando inglés</p>
-                <p class="centrar m-0">en cadadá</p>
-            </div>
-        </div>
-        <hr>
+      <section class="white_section section_gap">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="centrar">Te conectamos con instituciones acreditadas en Canadá</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <a class="btn bg-primary text-white" @click.prevent="scroll()">CTA</a>
-            </div>
+          <div class="heading">
+            <h3>Explora Toronto, Vancouver, Calgary, Montreal y Victoria<br>Estudia el programa que mas se adapte a tus
+              necesidades</h3>
+          </div>
         </div>
+      </section>
 
-        <div class="container mt-4">
-            <div class="row justify-content-center">
-                <div class="col-md-2">
-                    <div class="row justify-content-center">
-                        <img src="img/els.png" class="img-with" alt="" srcset="">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="row justify-content-center">
-                        <img src="img/st-giles.png" class="img-with">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="row justify-content-center">
-                        <img src="img/ilsc.jpg" class="img-with">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="row justify-content-center">
-                        <img src="img/els.png" class="img-with">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="row justify-content-center">
-                        <img src="img/global-village.png" class="img-with">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Explora Toronto, Vancovver, Calgary, Montreal y Victoria, estudia el programa que mas se adapte a
-                        tus necesidades.</p>
-                </div>
-                <div class="col-md-4 mt-4">
-                    <h2 class="tx-primary">Programas</h2>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    <ul class="list-group list-group-flush col-md-4">
-                        <li class="list-group-item">Inglés Académico</li>
-                        <li class="list-group-item">Preparación</li>
-                        <li class="list-group-item">Inglés general</li>
-                        <li class="list-group-item">Inglés de Negocios</li>
-                        <li class="list-group-item">Programas para niños y jovenes</li>
-                    </ul>
-                    <!-- <ul>
-                        <li>Inglés Académico</li>
-                        <li>Preparación</li>
-                        <li>Inglés general</li>
-                        <li>Inglés de Negocios</li>
-                        <li>Programas para niños y jovenes</li>
-                    </ul> -->
-                </div>
-                <div class="col-md-4 mt-4">
-                    <h2 class="tx-primary">Beneficiarios</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Asesoría experimentada en visa canadiense</li>
-                        <li class="list-group-item">Transporte al aeropuerto</li>
-                        <li class="list-group-item">Alojamiento</li>
-                        <li class="list-group-item">Inglés de Negocios</li>
-                        <li class="list-group-item">Tarjeta isic</li>
-                    </ul>
-                    <!-- <ul>
-                        <li>Asesoría experimentada en visa canadiense</li>
-                        <li>Transporte al aeropuerto</li>
-                        <li>Alojamiento</li>
-                        <li>Tarjeta isic</li>
-                    </ul> -->
-                </div>
-                <div class="container">
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>Nosotros</h2>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row justify-content-center">
-                                <img src="img/plus-18-movie.svg" class="tamano-iconos">
-                            </div>
-                            <p class="text-center">18 años de experiencia</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row justify-content-center">
-                                <img src="img/group.svg" class="tamano-iconos">
-                            </div>
-                            <p>+ de 500 estudiantes enviados a canadá</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row justify-content-center">
-                                <img src="img/favorites.svg" class="tamano-iconos">
-                            </div>
-                            <p>Acreditados por las mejores esculas de Canadá</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+      <section class="grey_section section_gap">
         <div class="container">
-            <hr>
-            <div class="row justify-content-center">
-                <form id="contacto" @submit.prevent="send()" class="col-md-8">
-                    <div class="rounded" :class="error.class" v-if="error">
-                        <p class="p-4" v-text="error.mensaje"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Nombre</label>
-                        <input type="nombre" class="form-control" v-model="registro.nombre" id="nombre"
-                            placeholder="Nombre">
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email"
-                            v-model="registro.email">
-                    </div>
-                    <button type="submit" class="btn bg-primary text-white btn-block" :disabled="button">Enviar</button>
-                </form>
+          <div class="row sec_top_gp">
+            <div class="col-xs-12 welcome">
+              <h1 class="welcome_heading">PROGRAMAS</h1>
             </div>
+            <div class="col-xs-12 welcome_text">
+              <p>Inglés Académico</p>
+              <p>Preparación TOEFL y IELTS</p>
+              <p>Inglés General</p>
+              <p>Inglés de Negocios</p>
+              <p>Programas para Niños y Jóvenes</p>
+            </div>
+          </div>
         </div>
-    </div>
-    <script src="https://kit.fontawesome.com/60362d4025.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="js/app.js"></script>
+      </section>
+
+      <section class="blue_section section_gap">
+        <div class="container">
+          <div class="heading">
+            <h1>BENEFICIOS</h1>
+          </div>
+          <div class="row sec_top_gp">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
+                  class="fa fa-comments"></i></span>
+              <h5>Asesoría Experimentada en Visa Canadiense</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
+                  class="fa fa-plane"></i></span>
+              <h5>Transporte al Aeropuerto el Dorado</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
+                  class="fa fa-home"></i></span>
+              <h5>Alojamiento<br>Hoteles</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
+                  class="fa fa-credit-card"></i></span>
+              <h5>Tarjeta<br>ISIC</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/What we do section end-->
+      <!--Stats numbers section start-->
+      <div class="container mt-50">
+        <div class="heading">
+          <h1>NOSOTROS</h1>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row justify-content-center">
+                <img src="images/plus-18-movie.svg" class="tamano-iconos">
+              </div>
+              <p class="text-center">18 años de experiencia</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row justify-content-center">
+                <img src="images/group.svg" class="tamano-iconos">
+              </div>
+              <p>+ de 500 estudiantes enviados a canadá</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row justify-content-center">
+                <img src="images/favorites.svg" class="tamano-iconos">
+              </div>
+              <p>Acreditados por las mejores esculas de Canadá</p>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </section>
+      <!--Contact section start-->
+      <section class="section_gap" style="background-image: url(images/bg-img.jpg)">
+        <div class="container">
+          <div class="heading">
+            <h1>Aplica a un Programa</h1>
+          </div>
+          <div class="row sec_top_gp">
+            <div class="blue_section col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <h3 class="text-white uppercase">Datos de Contacto</h3>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h4 class="text-white">Nuestras Oficinas</h4>
+                  <p class="text-white">Carrera 16 # 100 - 20 Piso 5<br>Bogotá, Colombia</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h4 class="text-white">Teléfonos</h4>
+                  <p class="text-white">(1) 2719814<br>3157904434
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h4 class="text-white">Email:</h4>
+                  <p class="text-white"><a href="mailto:gerencia@ulpa.com.co">gerencia@ulpa.com.co</a></p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h4 class="text-white">Atendemos con cita previa</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div id="message" :class="error.class">{{error.mensaje}}</div>
+              <!-- <div class="rounded mb-4" :class="error.class" v-if="error.mensaje != ''">
+                  <p class="m-4" v-text="error.mensaje"></p>
+              </div> -->
+              <form @submit.prevent="send()" id="contacto">
+                <div class="form-row clearfix">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 first">
+                    <input name="fname" id="fname" type="text" placeholder="Mi Nombre es..." class="normal"
+                      v-model="registro.nombres">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 last">
+                    <input name="lname" id="lname" type="text" placeholder="Mi Apellido es..." class="normal"
+                      v-model="registro.apellidos">
+                  </div>
+                </div>
+                <div class="form-row clearfix">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 first">
+                    <input name="email" id="email" type="email" placeholder="Mi Email es..." class="normal"
+                      v-model="registro.email">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 last">
+                    <input name="phone" id="phone" type="text" placeholder="Mi Número de Teléfono es..." class="normal">
+                  </div>
+                </div>
+                <div class="form-row clearfix">
+                  <textarea name="comments" id="comments" cols="" rows="" placeholder="Quiero Información Sobre..."
+                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" v-model="registro.mensaje"></textarea>
+                </div>
+                <input type="submit" id="submit" name="send" class="button" value="¡Listo! Enviar">
+                <div id="simple-msg"></div>
+              </form>
+
+              <!-- <pre>{{$data}}</pre> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/Contact section end-->
+      <footer class="footer white_section">
+        <div class="container">
+          <div class="row">
+            <div class="pull-left">
+              <p>&copy; 2019 University Language Programs Abroad. Todos los derechos reservados</p>
+            </div>
+          </div>
+        </div>
+        <a class="gototop smooth" href="#wrapper"><i class="fa fa-caret-up"></i></a>
+    <!-- </div> -->
+    </footer>
+
+  <!-- </div> -->
+
+  </div>
+</body>
+
+  <!--wrapper end-->
+
+  <!--jquary min js-->
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--for placeholder jquery-->
+  <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+
+  <!--for header jquery-->
+  <script type="text/javascript" src="js/stickUp.js"></script>
+  <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('#banner').superslides({
+      animation: 'fade',
+      play: false
+    });
+  </script>
+
+  <!--contact form js-->
+  <!-- <script type="text/javascript" src="js/jquery.contact.js"></script> -->
+
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/slideroption.js"></script>
+  <script src="https://kit.fontawesome.com/60362d4025.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!--for theme custom jquery-->
+  <script src="js/custom.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 
 </html>
+
+

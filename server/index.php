@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 
 
 if ($_POST) {
-    if ($_POST['nombre']) {
+    if ($_POST['nombres']) {
         return json_encode(sendMessage()); 
     }
 }else{
