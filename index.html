@@ -5,20 +5,44 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Estudios en el exterior I ULPA - University Language Programs Abroad</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/component.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
-      .text-red{
-        color: red !important;
+    .text-red {
+      color: red !important;
+    }
+
+    .position-fixed img {
+      z-index: 9999;
+      width: 60px;
+      position: fixed;
+      top: 3%;
+      right: 10px;
+      
+    }
+
+    .anime{
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    
+    
+    @keyframes slidein {
+      from {
+        top:3%
       }
-    </style>
+      to {
+        top: 20%;
+      }
+    }
+  </style>
 </head>
 
-<body onLoad="load()" onUnload="GUnload()">
+<body>
 
   <div id="app">
 
@@ -34,7 +58,9 @@
               <div class="navwrapper">
                 <div class="navbar navbar-inverse navbar-static-top">
                   <div class="container">
-                    <div class="logo"> <img src="images/logo-ulpa.png" alt=""> </div>
+                    <div class="logo">
+                      <img src="/images/logo-ulpa.png" alt="Logo ULPA" class="img-fluid">
+                    </div>
                     <nav class="navArea">
                       <div class="navbar-collapse collapse">
                         <i class="fa fa-mobile"></i>
@@ -58,10 +84,12 @@
                   <h3>Vive una experiencia inolvidable</h3>
                   <h3>Estudiando Inglés en Canadá</h3>
                   <p><span>Te Conectamos con Instituciones Acreditadas en Canadá</span></p>
-                  <button type="button" class="btn btn-principal btn-lg" @click.prevent="scroll()">Aplica a un programa</button>
+                  <button type="button" class="btn btn-principal btn-lg" @click.prevent="scroll('div #contacto')">Aplica
+                    a un
+                    programa</button>
                 </div>
               </div>
-              <img src="images/principal-img.jpg" alt="Imagen Ulpa">
+              <img src="/images/principal-img.jpg" alt="Imagen Ulpa" class="img-fluid">
             </div>
           </div>
         </div>
@@ -70,35 +98,20 @@
       <div class="container">
         <div class="row justify-content-center mt-50">
           <div class="col-md-3">
-            <div>
-              <img src="images/logo-aliado-2.jpg" class="img-with">
-            </div>
+            <img src="images/logo-aliado-2.jpg" class="img-fluid">
           </div>
           <div class="col-md-2">
-            <div>
-              <img src="images/logo-aliado-1.jpg" class="img-with">
-            </div>
+            <img src="images/logo-aliado-1.jpg" class="img-fluid">
           </div>
           <div class="col-md-2">
-            <div class="">
-              <img src="images/logo-aliado-4.jpg"  class="img-with">
-            </div>
+            <img src="images/logo-aliado-4.jpg" class="img-fluid">
           </div>
           <div class="col-md-2">
-            <div class="">
-              <img src="images/logo-aliado-3.jpg" class="img-with">
-            </div>
+            <img src="images/logo-aliado-3.jpg" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <div class="">
-              <img src="images/logo-aliado-5.jpg" class="img-with">
-            </div>
+            <img src="images/logo-aliado-5.jpg" class="img-fluid">
           </div>
-          <!-- <div class="col-md-2">
-              <div class="">
-                <img src="images/logo-aliado-5.jpg" class="img-with">
-              </div>
-            </div> -->
         </div>
       </div>
 
@@ -110,8 +123,6 @@
           </div>
         </div>
       </section>
-
-
       <section class="grey_section section_gap">
         <div class="container">
           <div class="row sec_top_gp">
@@ -161,31 +172,32 @@
           <h1>NOSOTROS</h1>
         </div>
       </div>
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="row justify-content-center">
-                <img src="images/plus-18-movie.svg" class="tamano-iconos">
-              </div>
-              <p class="text-center">18 años de experiencia</p>
-            </div>
-            <div class="col-md-4">
-              <div class="row justify-content-center">
-                <img src="images/group.svg" class="tamano-iconos">
-              </div>
-              <p>+ de 500 estudiantes enviados a canadá</p>
-            </div>
-            <div class="col-md-4">
-              <div class="row justify-content-center">
-                <img src="images/favorites.svg" class="tamano-iconos">
-              </div>
-              <p>Acreditados por las mejores esculas de Canadá</p>
-            </div>
+      <!-- <section> -->
+      <div class="container" style="margin-bottom: 50px">
+        <div class="row justify-content-center">
+          <div class="col-md-4 tamano-iconos">
+            <!-- <div class=""> -->
+            <img src="images/plus-18-movie.svg">
+            <p>18 años de experiencia</p>
+            <!-- </div> -->
+          </div>
+          <div class="col-md-4 tamano-iconos">
+            <img src="images/group.svg">
+            <p>+ de 500 estudiantes enviados a canadá</p>
+          </div>
+          <div class="col-md-4 tamano-iconos">
+            <img src="images/favorites.svg">
+            <p>Acreditados por las mejores esculas de Canadá</p>
           </div>
         </div>
-        <!-- </div> -->
-      </section>
+      </div>
+
+
+
+
+
+      <!-- </div> -->
+      <!-- </section> -->
       <!--Contact section start-->
       <section class="section_gap" style="background-image: url(images/bg-img.jpg)">
         <div class="container">
@@ -193,7 +205,7 @@
             <h1>Aplica a un Programa</h1>
           </div>
           <div class="row sec_top_gp">
-            <div class="blue_section col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="padding30px blue_section col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <h3 class="text-white uppercase">Datos de Contacto</h3>
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -216,7 +228,7 @@
 
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 formulario">
               <div id="message" :class="error.class">{{error.mensaje}}</div>
               <!-- <div class="rounded mb-4" :class="error.class" v-if="error.mensaje != ''">
                   <p class="m-4" v-text="error.mensaje"></p>
@@ -254,6 +266,12 @@
           </div>
         </div>
       </section>
+      <div class="position-fixed text-red">
+        <a href="#" @click.prevent>
+          <img src="/images/whatsapp.svg" alt="whatsapp ULPA" class="img-fluid">
+
+        </a>
+      </div>
       <!--/Contact section end-->
       <footer class="footer white_section">
         <div class="container">
@@ -263,51 +281,63 @@
             </div>
           </div>
         </div>
-        <a class="gototop smooth" href="#wrapper"><i class="fa fa-caret-up"></i></a>
-    <!-- </div> -->
-    </footer>
+        <a class="gototop smooth" href="#wrapper" @click.prevent="scroll('#app')"><i class="fa fa-caret-up"></i></a>
+        <!-- </div> -->
+      </footer>
 
-  <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="fixed-top">Algo de absolute</div> -->
 
-  </div>
+    </div>
 </body>
 
-  <!--wrapper end-->
+<!--wrapper end-->
 
-  <!--jquary min js-->
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<!--jquary min js-->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
-  <!--for placeholder jquery-->
-  <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<!--for placeholder jquery-->
+<!-- <script type="text/javascript" src="js/jquery.placeholder.js"></script> -->
 
-  <!--for header jquery-->
-  <script type="text/javascript" src="js/stickUp.js"></script>
-  <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $('#banner').superslides({
-      animation: 'fade',
-      play: false
-    });
-  </script>
+<!--for header jquery-->
+<!-- <script type="text/javascript" src="js/stickUp.js"></script> -->
+<script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $('#banner').superslides({
+    animation: 'fade',
+    play: false
+  });
 
-  <!--contact form js-->
-  <!-- <script type="text/javascript" src="js/jquery.contact.js"></script> -->
+  jQuery(document).scroll((s) => {
 
-  <script src="js/jquery.easing.js"></script>
-  <script src="js/jquery.mousewheel.js"></script>
-  <script defer src="js/slideroption.js"></script>
-  <script src="https://kit.fontawesome.com/60362d4025.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <!--for theme custom jquery-->
-  <script src="js/custom.js"></script>
-  <script src="js/app.js"></script>
+    if (window.scrollY > 160) {
+      $('.position-fixed img').addClass('anime')
+
+      console.log(window.scrollY)
+    } 
+    if(window.scrollY == 150 ){
+      console.log(window.scrollY)
+      $('.position-fixed img').removeClass('anime')
+    }
+  })
+</script>
+
+<!--contact form js-->
+<!-- <script type="text/javascript" src="js/jquery.contact.js"></script> -->
+
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script defer src="js/slideroption.js"></script>
+<!-- <script src="https://kit.fontawesome.com/60362d4025.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!--for theme custom jquery-->
+<script src="js/custom.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 
 </html>
-
-

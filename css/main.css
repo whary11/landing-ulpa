@@ -211,9 +211,15 @@ h4.subHeading{
 	border-bottom:1px solid #e3e4e8;
 	background-color:#f7f7fd;
 }
-.tamano-iconos {
-	width: 80px;
-	text-align: center;
+.tamano-iconos img {
+	 width: 100px !important;
+	 display: block;
+	margin: 0px auto !important;
+	/* font-size: 100px; */
+	/* text-align: center; */
+}
+.tamano-iconos p{
+	text-align: center !important;
 }
 /*----------------------------------------------------
 	3. Header Part
@@ -224,7 +230,7 @@ header{
 }
 .banner{
 	overflow:hidden ;
-	margin:0 auto !important;	
+	margin:0 auto !important;
 }
 .hedaer-inner {
 	height:100%;
@@ -241,7 +247,7 @@ header{
 	margin-top:-90px;
 	padding:0;
 	z-index:999999 ;
-} 
+}
 .bannerText h3{
 	color:#fefefe;
 	font-size:44px;
@@ -280,8 +286,8 @@ header{
 	float:left;
 	width:320px;
 	height:auto;
-	padding:0 15px;	
-	
+	padding:0 15px;
+
 }
 .navArea{
 	float:right;
@@ -382,12 +388,12 @@ header{
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-	
+
 	background: transparent;
 }
 .isStuck{
 	background:#cf4057 ;
-	
+
 	-o-transition: all .5s;
     -ms-transition: all .5s;
     -moz-transition: all .5s;
@@ -443,7 +449,7 @@ input.button{
 	line-height:45px;
 	font-weight:700;
 	text-align:center;
-	color:#cf4057;
+	/* color:#cf4057; */
 	text-transform:uppercase;
 	padding:0 25px;
 	width:auto;
@@ -451,12 +457,14 @@ input.button{
 	height:47px;
 	background:none;
 	border:none;
-	border:2px solid #cf4057;
+	/* border:2px solid #cf4057; */
+	color:#fff;
+	background-color:#cf4057;
 }
 input.button:hover {
 	text-decoration:none;
-	color:#fff;
-	background-color:#cf4057;
+	/* color:#fff;
+	background-color:#cf4057; */
 }
 h3.succes_message {
 	color:#3C3;
@@ -508,14 +516,18 @@ h3.succes_message {
 
 
 /* backgrounds */
-.white_section {	
+.white_section {
 	background-color:#fff;
 }
-.grey_section {	
+.grey_section {
 	background-color:#ececec;
 }
-.blue_section {	
+.blue_section {
 	background-color:#0a2856;
+}
+
+.padding30px{
+	padding: 30px;
 }
 .lightblue_section {
 	background-color:#f7f7fd;
@@ -598,7 +610,7 @@ h3.succes_message {
 	line-height:normal;
 	font-weight:400;
 	display:block;
-	letter-spacing:1px;	
+	letter-spacing:1px;
 }
 .ourservice-col:hover h5 {
 	color:#fff;
@@ -670,22 +682,25 @@ h3.succes_message {
 ------------------------------------------------------*/
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
-	
+
 	input.normal, select.normal, textarea.normal {
 		font-size:14px;
 		padding:10px 15px;
 	}
-	
+
+
 }
 
 @media screen and  (max-width: 810px) {
 	.logo {
 		float: none;
 		left: 76px;
-		margin-top: 17px;
-		position: absolute;
+		/* margin-top: 17px; */
+		margin-bottom: 10px;
+		/* position: absolute; */
 	}
 	.logo a:hover {
+		
 		background:none !important;
 	}
 	ul.language {
@@ -701,7 +716,7 @@ h3.succes_message {
 	}
 	.bannerText {
 		width:auto;
-		left:25px;
+		/* left:25px; */
 	}
 	.navArea {
 		float:none;
@@ -715,7 +730,7 @@ h3.succes_message {
 		display: block !important;
 		visibility: visible !important;
 	}
-	
+
 	.navbar-nav{
 		width: 100%;
 		color:#fff;
@@ -728,7 +743,11 @@ h3.succes_message {
 	.navbar.navbar-inverse.navbar-static-top a:hover{
 		background-color:none;
 	}
-	
+	.formulario{
+		margin-top: 20px !important;
+		/* background: red !important */
+	}
+
 	.navbar-nav > li{
 		float:none;
 		display:block;
@@ -741,22 +760,22 @@ h3.succes_message {
 	.navbar-nav > li.active> a:hover{
 		background:#000 !important;
 	}
-	.navbar-inverse .navbar-toggle:hover, 
+	.navbar-inverse .navbar-toggle:hover,
 	.navbar-inverse .navbar-toggle:focus {
 		background-color:inherit;
 	}
-	.navbar-inverse .navbar-toggle.active, 
+	.navbar-inverse .navbar-toggle.active,
 	.navbar-inverse .navbar-toggle.active:focus {
 		background-color:#000;
 	}
-	.navbar-inverse .navbar-toggle.active .icon-bar, 
+	.navbar-inverse .navbar-toggle.active .icon-bar,
 	.navbar-inverse .navbar-toggle.active:focus .icon-bar {
 		background-color:#fff;
 	}
 	.navbar-inverse .navbar-toggle .icon-bar {
 		background-color:#000;
 	}
-	
+
 	.navbar-toggle {
 		display:block !important;
 	}
@@ -768,7 +787,7 @@ h3.succes_message {
 	}
 	.isStuck .logo{
 		margin-left:15px;
-	}		
+	}
 	.navbar-toggle {
 		margin-top: 23px;
 	}
@@ -780,7 +799,7 @@ h3.succes_message {
 	}
 	.navbar-header .navbar-brand{
 		float:right;
-	}	
+	}
 	.navbar-nav > li:hover ul.submenu{
 	float: none;
 	display: block;
@@ -792,8 +811,8 @@ h3.succes_message {
 	ul.submenu li{ list-style:none; margin:0; }
 	ul.submenu li a{ padding:10px 10px !important; display:block; text-align:center !important; text-decoration:none;}
 	.navbar-nav > li:hover ul.submenu li a:hover{ background:#272727;}
-	
-	
+
+
 	.navArea {
 		margin:0;
 	}
@@ -835,7 +854,7 @@ h3.succes_message {
 	.hover_listing li .img {
 		text-align:center;
 	}
-	
+
 	.worklogo {
 		margin:0 40px;
 	}
@@ -844,19 +863,19 @@ h3.succes_message {
 	}
 	.worlcompany ul.flex-direction-nav li a.flex-next {
 		right:0;
-	}	
+	}
 	.footer {
 		text-align:center;
 	}
-	.footer .pull-left, 
+	.footer .pull-left,
 	.footer .pull-right {
 		float: none !important;
-	}	
+	}
 	ul.portfolioContainer li.col-xs-6{
 		width:49%;
 		min-height: 85px;
-		
-	}	
+
+	}
 	.bottomfourcol .col-sm-6 {
 		margin-bottom:15px;
 	}
@@ -866,7 +885,7 @@ h3.succes_message {
 		margin:0 auto;
 	}
 
-	
+
 }
 
 @media screen and (max-width: 767px) {
@@ -892,7 +911,7 @@ h3.succes_message {
 	.noPaddRight{
 		padding-right:15px !important;
 	}
-	
+
 	.bannerText h1 {
 		font-size:45px;
 		margin-bottom:10px;
@@ -976,5 +995,17 @@ h3.succes_message {
 
 
 
-
+/* @media screen and (max-width: 810px){
+	.bannerText{
+		left: 0px !important;
+	}
+	.logo {
+		margin-top: 0px;
+		left: 0px;
+		width: 90%;
+		text-align: center;
+		margin: 0px auto;
+		left:10px;
+	}
+} */
 

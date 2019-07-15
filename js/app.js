@@ -16,9 +16,9 @@ new Vue({
 
     },
     methods: {
-        scroll() {
+        scroll(selector) {
             $('html, body').animate({
-                scrollTop: $("div #contacto").offset().top
+                scrollTop: $(selector).offset().top
             }, 1500)
         },
         send() {
@@ -37,7 +37,6 @@ new Vue({
                 this.error.class = 'text-red'
                 this.error.mensaje = 'El mensaje es incorrecto.'
             }else{
-                // this.error = false;
                 $.ajax({
                     type: "POST",
                     url: "server",
@@ -49,7 +48,6 @@ new Vue({
                             this.error.mensaje = data.mensaje
                             this.button = true
                         }
-                        // console.log( data.mensaje );
                     }
                 });
             }
