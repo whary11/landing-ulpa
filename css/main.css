@@ -692,6 +692,17 @@ h3.succes_message {
 }
 
 @media screen and  (max-width: 810px) {
+
+	.btn-principal.btn-lg{
+		/* display: block */
+		margin-top: 0px;
+		bottom: 100px;
+		/* margin-bottom: 1000px; */
+	}
+
+	.slide img{
+		height: 100%;
+	}
 	.logo {
 		float: none;
 		left: 76px;
@@ -699,8 +710,11 @@ h3.succes_message {
 		margin-bottom: 10px;
 		/* position: absolute; */
 	}
+	.position-fixed img {
+		top: 15% !important;
+	  }
 	.logo a:hover {
-		
+
 		background:none !important;
 	}
 	ul.language {
@@ -720,6 +734,10 @@ h3.succes_message {
 	}
 	.navArea {
 		float:none;
+		/* margin-top:0px; */
+	}
+	.bannerText h3{
+		line-height: 35px;
 	}
 	.navbar-collapse.collapse {
 		display: none !important;
