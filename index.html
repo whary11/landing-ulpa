@@ -12,8 +12,18 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
+
+     
     .text-red {
       color: red !important;
+    }
+
+    .mt-90{
+      margin-top:90px;
+    }
+
+    .bannerText p{
+      font-size: 23px
     }
 
     .position-fixed img {
@@ -99,11 +109,16 @@
           <div class="img-principal mt-50">
             <img src="images/principal-img.jpg" alt="Imagen Ulpa" class="img-fluid">
           </div>
-          <div class="hedaer-inner p-2">
+          <div class="hedaer-inner p-2 col-md-12">
             <div class="bannerText">
               <h3>Vive una experiencia inolvidable</h3>
               <h3>Estudiando Inglés en Canadá</h3>
-              <p><span>Te conectamos con instituciones </span></p>
+
+              <p class="text-white">Te conectamos con instituciones</p>
+              <!-- <p><span> </span></p> -->
+
+              <!-- <h3>acreditadas</h3> -->
+
               <p class="two"><span>acreditadas</span></p>
               <button type="button" class="btn btn-principal btn-lg" @click.prevent="scroll('div #contacto')">Aplica
                 a un
