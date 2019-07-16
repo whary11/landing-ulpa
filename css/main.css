@@ -266,10 +266,10 @@ header{
 .bannerText h3{
 	color:#fefefe;
 	font-size:44px;
-	line-height:25px;
+	line-height:20px;
 	font-weight:600;
 	/* text-transform:uppercase; */
-	letter-spacing: 0.1em;
+	/* letter-spacing: 0.1em; */
 }
 .bannerText span{
 	color:#fff;
@@ -768,7 +768,7 @@ h3.succes_message {
 		/* margin-top:0px; */
 	}
 	.bannerText h3{
-		line-height: 35px;
+		/* line-height: 35px; */
 	}
 	.navbar-collapse.collapse {
 		display: none !important;
