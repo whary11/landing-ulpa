@@ -1059,3 +1059,27 @@ h3.succes_message {
 	}
 } */
 
+
+/* IPHONE */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { 
+	.bannerText{
+		/* margin-top: -800px; */
+			margin-bottom: 30%;
+	}
+
+}
+/* IPAD */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+	.bannerText{
+		margin-top: -500px;
+			margin-bottom: 30%;
+	}
+	.img-principal img{
+		height: 800px;
+	}
+}
+
