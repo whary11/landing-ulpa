@@ -11,24 +11,55 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
+    .clase{
+      width: 100%;
+      height:800px !important;
+      position: fixed;
+    }
     .redes img{
-      width: 50px;
-      padding: 10px;
+      width: 120px;
+      padding: 20px;
     }
     .bannerText{
-      margin-top: -800px;
+      margin-top: 250px;
     }
 
-    @media screen and (max-width: 810px){
+    @media (min-width: 320px) and (max-width:630px) {
 
       .bannerText {
-        margin-top: -400px;
+        margin-top: 220px;
+      }
+      .bannerText p span{
+        font-size:18px !important;
+        line-height: 0.2em;
+        padding: 0px 10px;
+        
+      }
     }
+ 
+    @media (min-width: 640px) and (max-width:767px) {
+
+    .bannerText {
+      margin-top: 115px;
     }
+    .bannerText p span{
+    font-size:18px !important;
+    line-height: 0em;
+    padding: 0px 10px;  
+    }
+    .redes img{
+      padding: 15px 20px;
+      width: 90px;
+
+    }
+    .redes{
+      margin-top: -20px;
+    }
+}
 
 
     .bannerText p span{
-      font-size: 30px
+      font-size: 38px
 
     }
 
@@ -55,7 +86,7 @@
   </style>
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="clase">
     <div class="wrapper" id="wrapper">
       <div id="preloader">
         <div id="status"></div>
@@ -84,40 +115,30 @@
           </div>
         </div>
         <!--menu end-->
-        <div class="row">
-          <div class="img-principal mt-50">
-            <img src="images/principal-img.jpg" alt="Imagen Ulpa" class="img-fluid">
-          </div>
-          <div class="hedaer-inner p-2">
-            <div class="bannerText">
-              <p><span>Gracias por registrarse, pronto nos pondremos en contacto.</span></p>
-              <p><span>Siguenos en nuestras redes sociales</span></p>
+      </header>
+      
+      <div class="container wrapper" style="background-image: url(images/bg-img-thanks.jpg);height:800px;">
+        <div class="row">          
+          <div class="hedaer-inner p-2 mt-50">
+            <div class="bannerText" style="z-index: 999">
+              <p><span>Hemos recibido tu información</span></p>
+              <p><span>Pronto nos pondremos en contacto</span></p>
+              <p><span>Mientras tanto conoce más de nosotros</span></p>
               <div class="row redes">
                 <a href="#">
-                  <img src="https://a283c2a9332e392396a8db90-ypbhm8m6r5ycuve.netdna-ssl.com/wp-content/uploads/2016/12/facebook-e1480683485165-100x100.png" alt="" srcset="">
+                  <img src="images/facebook.svg">
                 </a>
                 <a href="#">
-                  <img src="https://isabelsantiandreu.com/wp-content/uploads/2019/04/012-instagram-e1554142857283.png" alt="">
-                </a>
-                <a href="#">
-                  <img src="http://ec2-176-34-126-178.eu-west-1.compute.amazonaws.com/apps/twitter/images//icon100.png" alt="">
-                </a>
-                
+                  <img src="images/instagram.svg" alt="">
+                </a>                                
               </div>
-              
+              <button type="button" class="btn btn-principal btn-lg mt-50">Visita Nuestra Web</button>              
             </div>
           </div>
         </div>
-
-
-      </header>
-
-      
-
-      
-     
-      
-     
+      </div>
+   
+        
       <!-- </div> -->
       <!-- </section> -->
       <!--Contact section start-->
