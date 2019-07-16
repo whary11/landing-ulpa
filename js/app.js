@@ -47,6 +47,10 @@ new Vue({
                             this.error.class = "text-white"
                             this.error.mensaje = data.mensaje
                             this.button = true
+
+                            setTimeout(() => {
+                                window.location = 'confirmacion.html'
+                            }, 1000);
                         }
                     }
                 });

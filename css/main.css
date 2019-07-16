@@ -1044,22 +1044,6 @@ h3.succes_message {
 }
 
 
-
-/* @media screen and (max-width: 810px){
-	.bannerText{
-		left: 0px !important;
-	}
-	.logo {
-		margin-top: 0px;
-		left: 0px;
-		width: 90%;
-		text-align: center;
-		margin: 0px auto;
-		left:10px;
-	}
-} */
-
-
 /* IPHONE */
 @media only screen 
 and (min-device-width : 414px) 

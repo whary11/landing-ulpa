@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +12,17 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
-    .text-red {
-      color: red !important;
+    .redes img{
+      width: 50px;
     }
+    .bannerText{
+      margin-top: -800px;
+    }
+    .bannerText p span{
+      font-size: 30px
+
+    }
+
     .position-fixed img {
       z-index: 9999;
       width: 60px;
@@ -36,8 +45,11 @@
     }
   </style>
 </head>
+
 <body>
+
   <div id="app">
+
     <div class="wrapper" id="wrapper">
       <div id="preloader">
         <div id="status"></div>
@@ -66,196 +78,40 @@
           </div>
         </div>
         <!--menu end-->
-        <div class="banner row" id="banner">
-          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
-            <div class="slide">
-              <div class="container hedaer-inner">
-                <div class="bannerText">
-                  <h3>Vive una experiencia inolvidable</h3>
-                  <h3>Estudiando Inglés en Canadá</h3>
-                  <p><span>Te Conectamos con Instituciones Acreditadas en Canadá</span></p>
-                  <button type="button" class="btn btn-principal btn-lg" @click.prevent="scroll('div #contacto')">Aplica
-                    a un
-                    programa</button>
-                </div>
+        <div class="row">
+          <div class="img-principal mt-50">
+            <img src="images/principal-img.jpg" alt="Imagen Ulpa" class="img-fluid">
+          </div>
+          <div class="hedaer-inner p-2">
+            <div class="bannerText">
+              <p><span>Gracias por registrarse, pronto nos pondremos en contacto.</span></p>
+              <p><span>Siguenos en nuestras redes sociales</span></p>
+              <div class="row redes">
+                <a href="#">
+                  <img src="https://a283c2a9332e392396a8db90-ypbhm8m6r5ycuve.netdna-ssl.com/wp-content/uploads/2016/12/facebook-e1480683485165-100x100.png" alt="" srcset="">
+                </a>
+                <a href="#">
+                  <img src="https://isabelsantiandreu.com/wp-content/uploads/2019/04/012-instagram-e1554142857283.png" alt="">
+                </a>
               </div>
-              <img src="images/principal-img.jpg" alt="Imagen Ulpa" class="img-fluid">
+              
             </div>
           </div>
         </div>
+
+
       </header>
 
-      <div class="container">
-        <div class="row justify-content-center mt-50">
-          <div class="col-md-3">
-            <img src="images/logo-aliado-2.jpg" class="img-fluid">
-          </div>
-          <div class="col-md-2">
-            <img src="images/logo-aliado-1.jpg" class="img-fluid">
-          </div>
-          <div class="col-md-2">
-            <img src="images/logo-aliado-4.jpg" class="img-fluid">
-          </div>
-          <div class="col-md-2">
-            <img src="images/logo-aliado-3.jpg" class="img-fluid">
-          </div>
-          <div class="col-md-3">
-            <img src="images/logo-aliado-5.jpg" class="img-fluid">
-          </div>
-        </div>
-      </div>
+      
 
-      <section class="white_section section_gap">
-        <div class="container">
-          <div class="heading">
-            <h3>Explora Toronto, Vancouver, Calgary, Montreal y Victoria<br>Estudia el programa que mas se adapte a tus
-              necesidades</h3>
-          </div>
-        </div>
-      </section>
-      <section class="grey_section section_gap">
-        <div class="container">
-          <div class="row sec_top_gp">
-            <div class="col-xs-12 welcome">
-              <h1 class="welcome_heading">PROGRAMAS</h1>
-            </div>
-            <div class="col-xs-12 welcome_text">
-              <p>Inglés Académico</p>
-              <p>Preparación TOEFL y IELTS</p>
-              <p>Inglés General</p>
-              <p>Inglés de Negocios</p>
-              <p>Programas para Niños y Jóvenes</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="blue_section section_gap">
-        <div class="container">
-          <div class="heading">
-            <h1>BENEFICIOS</h1>
-          </div>
-          <div class="row sec_top_gp">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
-                  class="fa fa-comments"></i></span>
-              <h5>Asesoría Experimentada en Visa Canadiense</h5>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
-                  class="fa fa-plane"></i></span>
-              <h5>Transporte al Aeropuerto el Dorado</h5>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
-                  class="fa fa-home"></i></span>
-              <h5>Alojamiento<br>Hoteles</h5>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ourservice-col"> <span class="ico"><i
-                  class="fa fa-credit-card"></i></span>
-              <h5>Tarjeta<br>ISIC</h5>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--/What we do section end-->
-      <!--Stats numbers section start-->
-      <div class="container mt-50">
-        <div class="heading">
-          <h1>NOSOTROS</h1>
-        </div>
-      </div>
-      <!-- <section> -->
-      <div class="container" style="margin-bottom: 50px">
-        <div class="row justify-content-center">
-          <div class="col-md-4 tamano-iconos">
-            <!-- <div class=""> -->
-            <img src="images/plus-18-movie.svg">
-            <p>18 años de experiencia</p>
-            <!-- </div> -->
-          </div>
-          <div class="col-md-4 tamano-iconos">
-            <img src="images/group.svg">
-            <p>+ de 500 estudiantes enviados a canadá</p>
-          </div>
-          <div class="col-md-4 tamano-iconos">
-            <img src="images/favorites.svg">
-            <p>Acreditados por las mejores esculas de Canadá</p>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
+      
+     
+      
+     
       <!-- </div> -->
       <!-- </section> -->
       <!--Contact section start-->
-      <section class="section_gap" style="background-image: url(images/bg-img.jpg)">
-        <div class="container">
-          <div class="heading">
-            <h1>Aplica a un Programa</h1>
-          </div>
-          <div class="row sec_top_gp">
-            <div class="padding30px blue_section col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <h3 class="text-white uppercase">Datos de Contacto</h3>
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <h4 class="text-white">Nuestras Oficinas</h4>
-                  <p class="text-white">Carrera 16 # 100 - 20 Piso 5<br>Bogotá, Colombia</p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <h4 class="text-white">Teléfonos</h4>
-                  <p class="text-white">(1) 2719814<br>3157904434
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <h4 class="text-white">Email:</h4>
-                  <p class="text-white"><a href="mailto:gerencia@ulpa.com.co">gerencia@ulpa.com.co</a></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <h4 class="text-white">Atendemos con cita previa</h4>
-                </div>
-
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 formulario">
-              <div id="message" :class="error.class">{{error.mensaje}}</div>
-              <!-- <div class="rounded mb-4" :class="error.class" v-if="error.mensaje != ''">
-                  <p class="m-4" v-text="error.mensaje"></p>
-              </div> -->
-              <form @submit.prevent="send()" id="contacto">
-                <div class="form-row clearfix">
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 first">
-                    <input name="fname" id="fname" type="text" placeholder="Mi Nombre es..." class="normal"
-                      v-model="registro.nombres">
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 last">
-                    <input name="lname" id="lname" type="text" placeholder="Mi Apellido es..." class="normal"
-                      v-model="registro.apellidos">
-                  </div>
-                </div>
-                <div class="form-row clearfix">
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 first">
-                    <input name="email" id="email" type="email" placeholder="Mi Email es..." class="normal"
-                      v-model="registro.email">
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 last">
-                    <input name="phone" id="phone" type="text" placeholder="Mi Número de Teléfono es..." class="normal">
-                  </div>
-                </div>
-                <div class="form-row clearfix">
-                  <textarea name="comments" id="comments" cols="" rows="" placeholder="Quiero Información Sobre..."
-                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" v-model="registro.mensaje"></textarea>
-                </div>
-                <input type="submit" id="submit" name="send" class="button" value="¡Listo! Enviar">
-                <div id="simple-msg"></div>
-              </form>
-
-              <!-- <pre>{{$data}}</pre> -->
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <div class="position-fixed text-red">
         <a href="#" @click.prevent>
           <img src="images/whatsapp.svg" alt="whatsapp ULPA" class="img-fluid">
