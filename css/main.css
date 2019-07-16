@@ -267,7 +267,9 @@ header{
 	color:#fefefe;
 	font-size:44px;
 	line-height:20px;
-	font-weight:600;
+	font-weight:500;
+	letter-spacing: 0.1em;
+	line-height: 0.8em;
 	/* text-transform:uppercase; */
 	/* letter-spacing: 0.1em; */
 }
@@ -723,7 +725,7 @@ h3.succes_message {
 	}
 
 	.bannerText{
-		margin-top:-380px;
+		margin-top:-320px;
 		margin-bottom: 1%;
 	}
 	.img-principal img{
@@ -1059,7 +1061,7 @@ and (max-device-width : 736px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
 	.bannerText{
-		margin-top: -500px;
+		margin-top: -450px;
 			margin-bottom: 30%;
 	}
 	.img-principal img{
