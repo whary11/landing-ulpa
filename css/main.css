@@ -266,10 +266,9 @@ header{
 .bannerText h3{
 	color:#fefefe;
 	font-size:44px;
-	line-height:20px;
-	font-weight:600;
-	/* text-transform:uppercase; */
-	/* letter-spacing: 0.1em; */
+	font-weight:700;
+	letter-spacing: 0.1em;
+	line-height: 0.8em;
 }
 .bannerText span{
 	color:#fff;
@@ -723,8 +722,8 @@ h3.succes_message {
 	}
 
 	.bannerText{
-		margin-top:-380px;
-		margin-bottom: 1%;
+		margin-top:-370px;
+		margin-bottom: 10%;
 	}
 	.img-principal img{
 		height: 500px;
@@ -768,7 +767,7 @@ h3.succes_message {
 		/* margin-top:0px; */
 	}
 	.bannerText h3{
-		/* line-height: 35px; */
+		line-height: 0.8em;
 	}
 	.navbar-collapse.collapse {
 		display: none !important;
@@ -971,10 +970,13 @@ h3.succes_message {
 	.bannerText h3 {
 		font-size:25px;
 		margin-bottom:10px;
+		line-height: 1em;
 	}
+
 	.bannerText p {
 		font-size:13px;
-		line-height:normal;
+		line-height:1em;
+		margin-top: 70px;
 	}
 	.welcome {
 		padding-top:0;
@@ -1052,6 +1054,10 @@ and (max-device-width : 736px) {
 		/* margin-top: -800px; */
 			margin-bottom: 30%;
 	}
+	.bannerText p{
+		margin-top: 120px;	
+	}
+
 
 }
 /* IPAD */
@@ -1059,11 +1065,11 @@ and (max-device-width : 736px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
 	.bannerText{
-		margin-top: -500px;
+		margin-top: -450px;
 			margin-bottom: 30%;
 	}
 	.img-principal img{
 		height: 800px;
-	}
+	}	
 }
 
