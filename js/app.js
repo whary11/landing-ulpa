@@ -12,7 +12,6 @@ new Vue({
     },
     created() {
 
-        console.log('Montado');
 
     },
     methods: {
@@ -39,7 +38,7 @@ new Vue({
             }else{
                 $.ajax({
                     type: "POST",
-                    url: "server",
+                    url: "server/index.php",
                     data: this.registro,
                     success:(data)=>{
                         data = JSON.parse(data)
