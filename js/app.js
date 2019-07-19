@@ -3,12 +3,15 @@ new Vue({
     data: {
         registro: {
             nombres: '',
-            apellidos:'',
+            apellidos: '',
             email: '',
-            mensaje:''
+            mensaje: ''
         },
-        button:false,
-        error:{class:'', mensaje:''},
+        button: false,
+        error: {
+            class: '',
+            mensaje: ''
+        },
     },
     created() {
 
@@ -24,24 +27,33 @@ new Vue({
             if (this.registro.nombres.trim() == '') {
                 this.error.class = 'text-red'
                 this.error.mensaje = 'El nombre es incorrecto.'
-            }else if(this.registro.apellidos.trim() == ''){
+            } else if (this.registro.apellidos.trim() == '') {
                 this.error.class = 'text-red'
                 this.error.mensaje = 'Los apellidos son incorrectos.'
 
-            }else if(this.registro.email.trim() == ''){
+            } else if (this.registro.email.trim() == '') {
                 this.error.class = 'text-red'
                 this.error.mensaje = 'El email es incorrecto.'
 
-            }else if(this.registro.mensaje.trim() == ''){
+            } else if (this.registro.mensaje.trim() == '') {
                 this.error.class = 'text-red'
                 this.error.mensaje = 'El mensaje es incorrecto.'
-            }else{
+            } else {
                 $.ajax({
                     type: "POST",
                     url: "server/index.php",
                     data: this.registro,
-                    success:(data)=>{
+                    success: (data) => {
                         data = JSON.parse(data)
+                        console.log(data);
+
+                        // if (data.search('Mesaje enviado con éxito') != -1) {
+                        //     console.log('Se ha enviado el mensaje con éxito');
+
+                        // } else {
+                        //     console.log('Poseemos problemas.');
+
+                        // }
                         if (data.resp) {
                             this.error.class = "text-white"
                             this.error.mensaje = data.mensaje
